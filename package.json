@@ -1,0 +1,31 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "description": "Aula de WebSockets com Node.js pela Digital Innovation One",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmjardim05/node-webockets.git"
+  },
+  "keywords": [
+    "DIO",
+    "Websockets",
+    "Javascript",
+    "node.js",
+    "aula"
+  ],
+  "author": "João Marcos Jardim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmjardim05/node-webockets/issues"
+  },
+  "homepage": "https://github.com/jmjardim05/node-webockets#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "socketio": "^1.0.0"
+  }
+}
