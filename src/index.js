@@ -1,7 +1,7 @@
 const path = require("path");
 const Express = require("express");
 const http = require("http");
-const socketio = require("socketio");
+const socketio = require("socket.io");
 
 const app = Express();
 const server = http.createServer(app); // cria um servidor que utiliza o express para requisições
@@ -19,6 +19,14 @@ let onlineUsers = 0;
 // evento de conexão no servidor, recebe o socket no callback
 io.on("connection", socket => {
     let addedUser = false; // variável controla que o usuário já entrou
+
+    socket.on("newMessage", data => {
+        socket.broadcast.emit("newMessage", {
+            username: socket.username,
+            message: data
+        });
+        console.log("New message", data);
+    });
 
     // evento no socket quando conecta o usuário
     socket.on("addUser", username => {
